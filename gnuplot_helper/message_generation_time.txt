@@ -1,0 +1,11 @@
+# Scale font and line width (dpi) by changing the size! It will always display stretched.
+set terminal svg size 800,400 enhanced fname 'arial'  fsize 10 butt solid
+set output 'out.svg'
+
+# Key means label...
+set grid
+set key inside top left
+set xlabel 'Number of members(OBU+RSUs) in group'
+set ylabel 'Time for authentication(seconds)'
+set title 'Message generation time'
+plot  "data.txt" using 1:2 title 'Proposed Scheme' with linespoints

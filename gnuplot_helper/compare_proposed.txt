@@ -1,0 +1,11 @@
+# Scale font and line width (dpi) by changing the size! It will always display stretched.
+set terminal svg size 800,400 enhanced fname 'arial'  fsize 10 butt solid
+set output 'out.svg'
+
+# Key means label...
+set grid
+set key inside top left
+set xlabel 'Number of vehicles in simulation'
+set ylabel 'Time for authentication(s)'
+set title 'Fast message authentication using Secret sharing'
+plot  "data.txt" using 1:2 every 10 title 'TESLA based scheme' with linespoints, "data.txt" using 1:3 every 10 title 'ECDSA based scheme' with linespoints, "data.txt" using 1:4 every 10 title 'Proposed Scheme' with linespoints

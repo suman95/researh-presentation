@@ -1,0 +1,26 @@
+# Scale font and line width (dpi) by changing the size! It will always display stretched.
+set terminal svg size 800,400 enhanced fname 'arial'  fsize 10 butt solid
+set output 'out.svg'
+
+# Key means label...
+set grid
+show grid
+set key inside bottom right
+set xlabel 'Number of Vehicles in Simulation'
+set ylabel 'Time for authentication(s)'
+set title 'Proposed-scheme for message Authentication'
+
+set style func linespoints
+unset xtics
+unset ytics
+unset paxis 1 tics
+unset paxis 2 tics
+unset paxis 3 tics
+unset paxis 4 tics
+unset paxis 5 tics
+unset paxis 6 tics
+unset paxis 7 tics
+unset colorbox
+plot "data.txt" using 1:2 pt 6 title 'pi -4',   \
+     "data.txt" using 1:3 pt 7 title 'pi -3 pt 7 ps 0.2',  \
+     "data.txt" using 1:4 pt 7 title 'pi -6'
